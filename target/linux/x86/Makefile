@@ -17,12 +17,15 @@ KERNELNAME:=bzImage
 
 include $(INCLUDE_DIR)/target.mk
 
-DEFAULT_PACKAGES += partx-utils mkf2fs e2fsprogs kmod-button-hotplug kmod-usb-hid kmod-mmc kmod-sdhci kmod-fs-f2fs cfdisk usbutils pciutils \
-kmod-alx kmod-e1000e kmod-igb kmod-igc kmod-igbvf kmod-iavf kmod-bnx2x kmod-pcnet32 kmod-tulip kmod-via-velocity kmod-vmxnet3 kmod-i40e kmod-i40evf kmod-r8125 kmod-8139cp kmod-8139too kmod-tg3 \
-htop lm-sensors iperf3 autocore-x86 automount autosamba luci-app-adbyby-plus luci-app-ipsec-vpnd luci-proto-bonding luci-app-diskman \
-luci-app-unblockmusic luci-app-zerotier luci-app-xlnetacc ddns-scripts_aliyun ddns-scripts_dnspod ca-bundle luci-app-wireguard luci-app-ttyd \
-kmod-sound-hda-core kmod-sound-hda-codec-realtek kmod-sound-hda-codec-via kmod-sound-via82xx kmod-sound-hda-intel kmod-sound-hda-codec-hdmi kmod-sound-i8x0 kmod-usb-audio \
-kmod-usb-net kmod-usb-net-asix-ax88179 kmod-usb-net-rtl8150 kmod-usb-net-rtl8152-vendor kmod-usb-net-aqc111 kmod-mlx4-core kmod-mlx5-core kmod-drm-i915 kmod-drm-amdgpu
+DEFAULT_PACKAGES += autocore-x86 automount base-files bash block-mount busybox ca-bundle coremark curl dnsmasq-full \
+dropbear ds-lite e2fsprogs fdisk firewall fstools grub2-bios-setup htop kmod-8139cp kmod-8139too kmod-alx kmod-amazon-ena \
+kmod-amd-xgbe kmod-bnx2 kmod-bnx2x kmod-button-hotplug kmod-drm-amdgpu kmod-drm-i915 kmod-e1000 kmod-e1000e kmod-forcedeth \
+kmod-fs-vfat kmod-i40e kmod-iavf kmod-igb kmod-igbvf kmod-igc kmod-ipt-nat kmod-ipt-nat6 kmod-ixgbe kmod-lib-zstd \
+kmod-mlx4-core kmod-mlx5-core kmod-mmc kmod-pcnet32 kmod-phy-broadcom kmod-r8125 kmod-r8168 kmod-sdhci kmod-tcp-bbr kmod-tg3 \
+kmod-tulip kmod-usb-hid kmod-vmxnet3 libc libgcc libustream-wolfssl lm-sensors-detect logd lsblk luci-app-advanced \
+luci-app-autoreboot luci-app-firewall luci-app-gpsysupgrade luci-app-opkg luci-app-upnp luci-app-wizard luci-base luci-compat \
+luci-lib-fs luci-lib-ipkg mkf2fs mtd nano netifd odhcp6c odhcpd-ipv6only openssh-sftp-server opkg partx-utils pciutils ppp \
+ppp-mod-pppoe procd procd-seccomp resolveip swconfig uci uclient-fetch urandom-seed urngd usbutils wget-ssl zram-swap
 
 $(eval $(call BuildTarget))
 
